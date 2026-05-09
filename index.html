@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Cargando...</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav id="nav">
+        <a href="#" class="nav-logo" id="nav-logo"></a>
+        <ul class="nav-links">
+            <li><a href="#galeria" id="nav-galeria-link">Galería</a></li>
+            <li><a href="#productos" id="nav-productos-link">Productos</a></li>
+            <li><a href="#nosotros" id="nav-nosotros-link">Nosotros</a></li>
+            <li><a href="#contacto" id="nav-contacto-link" class="nav-cta">Contactar</a></li>
+        </ul>
+        <button class="nav-hamburger" onclick="toggleMenu()" aria-label="Menú">☰</button>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-bg" id="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge" id="hero-badge"></div>
+            <h1 class="hero-title" id="hero-title"></h1>
+            <p class="hero-tagline" id="hero-tagline"></p>
+            <div class="hero-meta" id="hero-meta"></div>
+            <div class="hero-actions">
+                <a href="#contacto" class="btn-primary" id="hero-btn-primario">💬 Consultar ahora</a>
+                <a href="#galeria" class="btn-secondary" id="hero-btn-secundario">Ver galería →</a>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>↓</span>
+        </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section class="section galeria-section" id="galeria">
+        <div class="section-inner">
+            <div class="section-header">
+                <p class="section-label">Galería</p>
+                <h2 class="section-title">Lo que hago</h2>
+            </div>
+            <div class="galeria-grid" id="galeria-grid"></div>
+        </div>
+    </section>
+
+    <!-- PRODUCTOS / SERVICIOS -->
+    <section class="section productos-section" id="productos">
+        <div class="section-inner">
+            <div class="section-header">
+                <p class="section-label">Productos &amp; Servicios</p>
+                <h2 class="section-title">Lo que ofrezco</h2>
+            </div>
+            <div class="productos-grid" id="productos-grid"></div>
+            <div class="productos-cta">
+                <p>¿Querés hacer un pedido o consultar disponibilidad?</p>
+                <a href="#contacto" class="btn-primary">Contactar →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NOSOTROS / QUIEN SOY -->
+    <section class="section nosotros-section" id="nosotros">
+        <div class="section-inner nosotros-inner">
+            <div class="nosotros-img-wrap">
+                <img id="nosotros-img" src="" alt="Sobre nosotros" loading="lazy">
+                <div class="nosotros-badge-float" id="nosotros-badge-float"></div>
+            </div>
+            <div class="nosotros-text">
+                <p class="section-label">Nuestra historia</p>
+                <h2 class="section-title" id="nosotros-nombre"></h2>
+                <p class="nosotros-desc" id="nosotros-desc"></p>
+                <div class="nosotros-stats" id="nosotros-stats"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIOS -->
+    <section class="section testimonios-section" id="testimonios">
+        <div class="section-inner">
+            <div class="section-header">
+                <p class="section-label">Testimonios</p>
+                <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+            </div>
+            <div class="testimonios-grid" id="testimonios-grid"></div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section contacto-section" id="contacto">
+        <div class="section-inner contacto-inner">
+            <div class="contacto-text">
+                <p class="section-label">Contacto</p>
+                <h2 class="section-title">¿Hablamos?</h2>
+                <p class="contacto-desc" id="contacto-desc"></p>
+                <div class="contacto-btns" id="contacto-btns"></div>
+            </div>
+            <div class="contacto-card" id="contacto-card">
+                <div class="contacto-card-logo" id="contacto-card-logo"></div>
+                <div class="contacto-card-info" id="contacto-card-info"></div>
+                <a class="contacto-viko-link" id="contacto-viko-link" href="#" target="_blank">
+                    <span>Ver ficha en</span>
+                    <strong>Viko.</strong>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer">
+        <div class="footer-inner">
+            <div class="footer-left">
+                <span class="footer-logo" id="footer-logo"></span>
+                <span class="footer-copy" id="footer-copy"></span>
+            </div>
+            <div class="footer-right">
+                <span style="font-size:12px;opacity:0.4;">Sitio creado por</span>
+                <a href="https://viko.com.ar" target="_blank" class="footer-viko">Viko.</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+        <button class="lightbox-prev" onclick="lightboxPrev(event)">‹</button>
+        <button class="lightbox-next" onclick="lightboxNext(event)">›</button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
